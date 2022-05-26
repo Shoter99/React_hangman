@@ -1,4 +1,3 @@
-import { deepStrictEqual } from "assert";
 import React, { useState } from "react";
 interface Props {
   value: string;
