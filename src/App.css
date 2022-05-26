@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body{
+  background-color: #e5e5e5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-bar{
+  background-color: #14213d;
+  color: #e5e5e5;
+  height: 5vh;
+  font-size: 3em;
+  padding: 2rem;
+  align-items: center;
   display: flex;
-  flex-direction: column;
+}
+.keyboard-wrapper{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.keyboard{
+  background-color: #d5d5d5;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: .5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.key{
+  padding: .8rem;
+  font-size: 1.2em;
+  width: 32px;
+  height: 32px;
+  margin: .2rem;
+  text-align: center;
+  border-radius: .5rem;
+  background-color: #14213d;
+  color: #e5e5e5;
+  transition: all .2s ease-in-out;
+}
+.key:hover, .key:focus{
+  cursor: pointer;
+  background-color: #e5e5e5;
+  color: #14213d;
+}
+.key-used{
+  background-color: #888;
+  color: #e5e5e5;
+  border: none;
+}
+.key-used:hover{
+  color: #e5e5e5;
+  background-color: #888;
+  cursor: default;
+}
+.key-correct{ 
+  background-color: #fca311;
+  color: #14213d;
+}
+.key-correct:hover{
+  background-color: #fca311;
+  color: #14213d;
+  cursor: default;
+}
+@media screen and (max-width:640px) {
+  .app-bar{
+    font-size: 1.5em;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .key{
+    font-size: .8em;
+    width: 16px;
+    height: 16px;
+    padding: .4rem;
   }
 }
